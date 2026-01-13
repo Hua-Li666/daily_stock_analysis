@@ -6,10 +6,24 @@ name: PR Review
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - 'pyproject.toml'
+      - 'setup.cfg'
+      - 'Dockerfile'
+      - 'docker-compose.yml'
+  # 支持手动触发（用于重新审查）
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR 编号（留空则审查最新 PR）'
+        required: false
+        type: string
 
 # 限制并发，避免同一 PR 多次触发时重复评论
 concurrency:
-  group: pr-review-${{ github.event.pull_request.number }}
+  group: pr-review-${{ github.event.pull_request.number || github.run_id }}
   cancel-in-progress: true
 
 permissions:

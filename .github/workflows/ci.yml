@@ -6,8 +6,24 @@ name: CI
 on:
   push:
     branches: [main]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - 'pyproject.toml'
+      - 'setup.cfg'
+      - '.github/workflows/**'
+      - 'Dockerfile'
+      - 'docker-compose.yml'
   pull_request:
     branches: [main]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - 'pyproject.toml'
+      - 'setup.cfg'
+      - '.github/workflows/**'
+      - 'Dockerfile'
+      - 'docker-compose.yml'
 
 jobs:
   # ==================== 核心检查（必须通过）====================
