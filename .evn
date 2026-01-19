@@ -18,8 +18,7 @@ TUSHARE_TOKEN=your_tushare_token_here
 #
 # 【方案一】使用 Gemini（推荐，有免费额度）
 # 从 https://aistudio.google.com/ 获取免费 API Key
-# 留空或删除此行则跳过 Gemini，直接使用方案二
-#
+# 
 GEMINI_API_KEY=
 GEMINI_MODEL=gemini-3-flash-preview
 GEMINI_MODEL_FALLBACK=gemini-2.5-flash
