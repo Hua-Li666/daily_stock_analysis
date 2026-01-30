@@ -4,13 +4,13 @@
 # ===================================
 
 # 自选股列表（逗号分隔，支持沪深两市代码）
-# 沪市：600519, 601xxx, 603xxx
-# 深市：000xxx, 002xxx, 300007
-STOCK_LIST=600519,300077,300059,002459
+# 沪市：601618, 603019, 603993
+# 深市：300059, 300077, 300007
+STOCK_LIST=601618,300077,300059,002459
 
 # 数据源配置
 # Tushare Pro Token（可选，从 https://tushare.pro 获取）
-TUSHARE_TOKEN=your_tushare_token_here
+TUSHARE_TOKEN=a965f5d7c36fe352daa5d86a3f9413623bd23115973d1c15754b3acb
 
 # 
 #
@@ -20,16 +20,14 @@ TUSHARE_TOKEN=your_tushare_token_here
 # 如果不想用 Gemini，可以只配置下面三项（去掉注释）
 # 支持：OpenAI、DeepSeek、通义千问、Moonshot、智谱GLM 等
 #
-
-#
 # --- OpenAI 官方（只需填 Key）---
-# OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
+# OPENAI_API_KEY=sk-8b2e63a6b201461c99022b701caca3a9
 #
 # --- DeepSeek（国产，便宜好获取）---
 # OPENAI_API_KEY=sk-8b2e63a6b201461c99022b701caca3a9
 # OPENAI_BASE_URL=https://api.deepseek.com/v1
 # OPENAI_MODEL=deepseek-chat
-
+#
 # 搜索引擎配置（用于获取股票新闻）
 # Tavily API Keys（支持多个，逗号分隔）
 TAVILY_API_KEYS=your_tavily_key_here
