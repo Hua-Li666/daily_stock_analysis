@@ -12,9 +12,29 @@ STOCK_LIST=601618,300077,300059,002459
 # Tushare Pro Token（可选，从 https://tushare.pro 获取）
 TUSHARE_TOKEN=a965f5d7c36fe352daa5d86a3f9413623bd23115973d1c15754b3acb
 
-# 
+# ===================================
+# AI 模型配置（二选一，至少配置一个）
+# ===================================
 #
-# 
+# 【方案一】使用 Gemini（推荐，有免费额度）
+# 从 https://aistudio.google.com/ 获取免费 API Key
+# 留空或删除此行则跳过 Gemini，直接使用方案二
+#
+GEMINI_API_KEY=AIzaSyAClQtORdfpp_wsR5nuMfw1aKTZSasy9Jk
+GEMINI_MODEL=gemini-3-flash-preview
+GEMINI_MODEL_FALLBACK=gemini-2.5-flash
+GEMINI_REQUEST_DELAY=2.0
+
+# 【方案二】使用 OpenAI 兼容 API（支持多种国产模型）
+# 如果不想用 Gemini，可以只配置下面三项（去掉注释）
+# 支持：OpenAI、DeepSeek、通义千问、Moonshot、智谱GLM 等
+#
+# ┌──────────────────────────────────────────────────────────────┐
+# │ 配置规则：                                                    │
+# │   OPENAI_API_KEY   = 必填，你的 API Key                      │
+# │   OPENAI_BASE_URL  = 可选，第三方 API 地址（OpenAI官方可不填）│
+# │   OPENAI_MODEL     = 可选，模型名称（默认 gpt-4o-mini）       │
+# └──────────────────────────────────────────────────────────────┘
 #
 # --- OpenAI 官方（只需填 Key）---
 # OPENAI_API_KEY=sk-8b2e63a6b201461c99022b701caca3a9
